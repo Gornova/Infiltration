@@ -1,0 +1,95 @@
+[	
+	{
+		"name": "generous",
+		"description": "generous heart makes hard to corrupt\n+20% bonus on social challenges",
+		"value": 0.2,
+		"effect": "SOCIAL_BONUS",
+		"bonus" : true,
+		"challengeType" : "SOCIAL"
+	}, {
+		"name": "greedy",
+		"description": "greedy makes this human more inclined to corruption\n-20% malus on social challenges",
+		"value": -0.2,
+		"effect": "SOCIAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "SOCIAL"
+	}, {
+		"name": "ignorant",
+		"description": "ignorant keep darkness in this human mind\n-20% malus on mental challenges",
+		"value": -0.2,
+		"effect": "MENTAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "MENTAL"
+	}, {
+		"name": "intelligent",
+		"description": "intelligent, a light in this mortal's mind slow done your steps\n+20% bonus on mental challenges",
+		"value": 0.2,
+		"effect": "MENTAL_BONUS",
+		"bonus" : true,
+		"challengeType" : "MENTAL"
+	}, {
+		"name": "strong",
+		"description": "strong body makes fights more easy\n+20% bonus on strength challenges",
+		"value": 0.2,
+		"effect": "PHYSICAL_BONUS",
+		"bonus" : true,
+		"challengeType" : "PHYSICAL"
+	}, {
+		"name": "weak",
+		"description": "weak boady makes fights more hard\n-20% malus on strength challenges",
+		"value": -0.2,
+		"effect": "PHYSICAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "PHYSICAL"
+	}, {
+		"name": "integrity",
+		"description": "integrity of mind keep mortal away from your control\n+50% bonus to resist a corrupt action",
+		"value": 0.5,
+		"effect": "CORRUPT_RESIST_BONUS",
+		"bonus" : true,
+		"challengeType" : "MENTAL"
+	}, {
+		"name": "willpower",
+		"description": "willpower of spirti makes hard for mortals to hear your voice\n+50% bonus to resist a calling action",
+		"value": 0.5,
+		"effect": "CALLING_RESIST_BONUS",
+		"bonus" : true,
+		"challengeType" : "PHYSICAL"
+		
+	}, {
+		"name": "determination",
+		"description": "determination makes hard to manipulate mortals\n+50% bonus to resist a manipulation action",
+		"value": 0.5,
+		"effect": "MANIPULATION_RESIST_BONUS",
+		"bonus" : true,
+		"challengeType" : "SOCIAL"
+	}, {
+		"name": "scarred",
+		"description": "an horrible scar keep people away\n-30% malus on social challenges",
+		"value": -0.3,
+		"effect": "SOCIAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "SOCIAL"
+	}, {
+		"name": "anathema",
+		"description": "an anathem is casted on this mortal, other mortals hate him\n-30% malus on social challenges",
+		"value": -0.3,
+		"effect": "SOCIAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "SOCIAL"
+	}, {
+		"name": "falseGod",
+		"description": "this mortal waste his time praying a false god\n-30% malus on mental challenges",
+		"value": -0.3,
+		"effect": "MENTAL_MALUS",
+		"bonus" : false,
+		"challengeType" : "MENTAL"
+	}, {
+		"name": "renowned",
+		"description": "renowned from other mortals is always useful\n+10% bonus on social challenges",
+		"value": 0.1,
+		"effect": "SOCIAL_BONUS",
+		"bonus" : true,
+		"challengeType" : "SOCIAL"
+	}
+]

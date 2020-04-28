@@ -1,0 +1,349 @@
+Sprint 1 "first manipulation start"
+	+ add focus action: unlock actor details, require 1 power and 11 - power turns
+	+ add random hate relationship for each actor
+	+ add calling action
+	+ added log panel
+	+ name of cities under icon
+	+ event example
+	+ sample event creation
+	+ tooltip for stats
+	+ action manipulation, first implementation based on role
+	+ display relation only for focused actors
+	+ disable focus action for focused actors
+	+ rebel system and merchant "madness" action
+	+ added win condition
+	+ added random actors to every city
+	+ turn count on interface
+	+ city statistics tooltips
+	+ set editable false to description
+	+ calling action possible only on focused actor
+	+ madness for mage: summon horrors that attack everything
+	+ madness for warrior: attack everyone and increase madness
+	+ madness for assassin: kill people and population leave
+	+ madness for thief: people no more trust on government	
+	+ famine event => population loss
+	+ clue mechanics:
+		+every action leaves clues:
+		+	focus: +1
+		+	calling: +5
+		+	manipulate: +3
+		+if clues > 10 in a poi
+		+	quest for a character in 10 turns: check % del png, se vince:
+			+1 global awarness
+		+if (awarness > 5)
+		+	player lose
+	+ minor UI enhancements and polish
+	+ rebellion outcome better text	
+	+ icon for assassins
+	+ color for city status on map
+	+ test and balance => a normal run
+	+ release version 0.0.1
+	
+Sprint 2 "factions&consequences"
+	+ added recruitment system: if a poi has less than 3 character, there is a 2% of chance every turn that 
+		a new character spawn, with random relation with someone in the poi 
+	+ maximum character for every poi 7, random between 3 and 7
+	+ BUG: for two character with same name/role/stats in a poi
+	+ BUG: a character cannot have a relation with itself
+	+ BUG: new recruited actors will always have one relation
+	+ BUG: when a character in on investigation, player cannot use direct action on them
+	+ BUG: now is no more possible to have power less than 0
+	+ BUG: is possible to send on calling more than one time on a poi two different characters!	
+	+ notification are for multiple events
+		notification after 3 turns fade out
+	+ faction system: a war is triggered by bad relations. With war between factions, player action is not possible. 
+		After 10 turns, there is possible ( by warExaustion ) that a peace start
+	+ faction tooltip display relation information between factions		
+	+ now high madness actions has negative impact -10 on faction relations		 
+	+ BUG: remove actions if a character is dead
+	+ Display population value on poi stats
+
+Sprint 3 "polish"
+	+ added intro event panel
+	+ added automatic advancement for turns with pause
+	+ added power and awarness icons
+	+ character portraits based on roles
+	+ added help button
+		
+Sprint 4 "Interactive cities"
+	+ fixed typos
+	+ first city integration
+	+ fix ui: play button status on start and tooltip, clear event button on click
+	+ display on ui basic city player stats
+	+ poi panel now display district's owner
+	
+Sprint 5 "Spellcheck and one package"
+	+ mavenized project, assembly and created release for windows: exe and linux/mac: jar
+	+ fixed small ui changes
+	+ extracted messages for translation
+	+ many thanks to Rowan for fix grammar and typos
+	
+Sprint 6 "Explain it better"
+	+ more relationships: now every actor can have more than one relationship
+	+ ui upgrade: 
+		+ all clickable icons now have on hover image
+		+ added background on city labels
+		+ added different icons for every city
+		+ added icon near city to display corrupted actors
+		+ added scrollable quest log for every actor with text of solved quests
+		+ added game icon
+		+ added current action counter on actor list
+	+ small bugfixes
+	+ every city has one secret to uncover, linked to a specific district. 
+		Only mortal that own a particular district can uncover the secret and give player more power 
+	
+Sprint 7 "Challenge and tag system"
+	+ tag system:
+		+ every actor has a chance (20%) to get a random tag on creation (or none) tag gives him some bonus o malus
+		+ simple display of tags on actor panel
+		+ tags are defined in a json file
+		+ tag evaluation on quest solving
+			+ every quest has a challenge type (physical, social, mental) and a base difficulty.
+			  during quest resolution, an actor roll a 100% dice, add bonus or remove malus and result must be more than difficulty 
+		+ player actions (focus/calling/manipulate) are challenge too:
+			+ there is a preview window with bonus and maluses that are applied for each action:
+				+ every one point of ancient power gives +20%
+				+ if city is on rebellion, focus action gets +30%
+				+ if target npc is involved in a faction war, gets -20%
+				- manipulate action (high action) gives a tag to a poi 
+					(malus on actions in the poi) see ManipulateAction row 66
+			+ focus action is a mental challenge
+			+ manipulate action is a social challenge
+			+ calling action could be strenght/social/mental challenge too
+		+ add some action related tags:
+			+ integrity: to resist focus, +50%
+			+ willpower: to restist calling, +50%
+			+ determination: to resist manipulation, +50%
+		+ particular quests can give also tags as bonus (if solved) or malus (if not solved)
+	+ added filter on log for cities		
+	+ fix max stats bug (for example for an npc Followers 11/10 !)
+	+ test, update readme, marketing stuff, blog post and prepare for RELEASE!!
+
+
+Sprint 8 "Roads and trips"
+	+ tooltip for cities with city nickname
+	+ slow down cities rebellions
+	+ improved translations
+		+ moved cities descriptions in json file, fixes by Rowan
+		+ messages fixes, thanks Rowan
+	+ added clickable link on tutorial
+	+ an actor under player influence cannot investigate on clues in a city
+	+ characters moves between cities
+		+ added roads with connection between cities
+		+ move actor animation between cities
+		+ if a actor has 2 money and own no district and no under player focus and 50% probability, can move to another city
+	+ new game icons from: https://opengameart.org/content/700-rpg-icons from Lorc	
+	+ test, update readme, marketing, blog post and prepare for RELEASE!!
+
+
+Sprint 9 "Go down that road"
+	+ fixed infinite rebellion bug, thanks to Archifenix for reporting it!
+	+ rename focus to corrupt
+		+ more clear to understand
+	+ draw connection between cities, using dashed draw from https://www.codejava.net/java-se/graphics/drawing-lines-examples-with-graphics2d
+	+ improved distric icons, thanks to https://opengameart.org/content/700-rpg-icons from Lorc
+	+ unlockable pois
+		+ added new poi type: ruin
+		+ actors can move to a ruin poi
+		+ hidden value for a poi (ruins for now)
+		+ trigger hidden pois when a secret is uncovered
+		+ create first poi - ruin
+		+ action to move corrupted agent into a specific poi
+	+ test, update readme, marketing, blog post and prepare for RELEASE!!
+	
+Sprint 10 "Hidden horrors"
+	+ bug after corrupt is still corruptable
+	+ bug select a ruin poi then all cities are not selectable
+	+ fight in a ruin poi between agent and monsters to uncover secret knowledge
+	+ random monster in temple ruin
+	+ default log is disabled for all, user has to click to activate it 
+	+ differentiate between title for tutorial panel and event panel
+	+ fixed minor bugs on ui side
+	+ test, update readme, marketing, blog post and prepare for RELEASE!!
+
+
+FARE IL RILASCIO!!
+	
+	
+-----------------
+	
+	- better formatting for quest log adding days and same for logPanel
+	
+	- new types of ruins
+	- new type of monsters in ruins
+	- new random type of unlockable ruins
+
+		
+		
+
+		- few hidden pois on start (dictate type of encounter): old ruins (undead), lost temple (elemental), cave (mythos)  
+			+ different icons for three types
+				- ruins: DwarvenRuins.svg
+				- temple: DaedricShrine.svg
+				- cave: cave.svg
+			- transform icons on right size for the map
+			- different simulation here:
+				- a set of quests to complete:
+					- search inside the poi
+						- solve a social/mental challenge
+					- conquer the poi
+						- kill the monster inside
+							- on kill a hidden knowledge is revealed!
+				- unique tags
+					- common tags:
+						- furtive: defense bonus
+						- fearless: 
+					- undead:
+						- abnormal:
+						- decadent: 
+						- filthy:
+						- buckled
+						- hatred:
+					- elemental:
+						- dark
+						- iridiscent
+						- enormous
+					- mythos:
+						- squamous: 
+						- nameless: arcane bonus and social bonus
+						- Cyclopean: physical bonus
+						- eldritch:
+
+					
+			- hidden secret inside
+				- hidden monstrous npc here
+					- undead: zombie, skeleton, ghost, abomination (physical)
+					- elemental: fire, water, earth, tempest (mental)
+					- mythos: formless creature, ghast, mi-go, flying polyp (arcane)
+		- two hidden poi at start
+			- one is reveled after first hidden knowledge
+			- second is relealed after a winning manipulation between npc
+		- in a city connected with nearby revealed poi
+			- player has corrupted npc
+				- can make it move there
+					- global action: move npc to target city
+	- created monsters from mages are build with same tags, etc..
+	- city outline when selected
+	- on over for new icons
+	- spacebar pause
+	- event pause: configurable ?
+	- video tutorial ?
+	- decide to travel action and plan action ?
+	- mostrare possedimenti png nella loro scheda
+	
+
+	spunti grafica:
+	
+	Hi! You will find the font we used here: https://www.fontsquirrel.com/fonts/eb-garamond …. In general this website https://www.dafont.com/fr/theme.php?cat=401 … is a good resource for font. But if you want to publish your game, be careful that the one you plan to use is also okay for commercial use (most of them are). About paper textures we used this huge database: https://www.textures.com/category/paper/16217 …. If you login, you can download up to 15 images per day. Best, Aurelien
+	
+
+		- colorare l'icona del distretto dorata se posseduta da un png ?
+		- in progress interpolazione usando lerp: https://medium.freecodecamp.org/understanding-linear-interpolation-in-ui-animations-74701eb9957c
+
+focus sui png e sulle loro azioni.
+non possederli direttamente, ma poter forzare le loro azioni (aumentandone il peso relativo) rispetto ad una lista.
+es. il png vorrebbe reclutare, tu gli dici: no vai ed uccidi X
+chiaro per sbloccare le azioni più pesanti va implementato un sistema a punti, così all'inizio non puoi forzare una tua marionetta a fare tutto.
+tipo l'idea del destino che guida a fare certe azioni e certe no.
+
+
+Archifenix ideas:
+- Ideas: "Regime purge".: Make it so instead of rebellions going on forever, they reduce the population a bit and purge all characters who own districts as well as purchasing food so a new rebellion is not as likely to occur.
+- "Everybody on edge": If population is at 1000, a revolt does not happen (as that would effectively result in a depopulated city), but the unrest does as the idea name says and so agents are much more likely to be discovered. If they are found out, they are lynched, reducing unrest as the government uses them as escapegoats.
+- "Time for peace": After a new regime takes over, cut unrest in half, 2/3, or do away with it entirely.
+
+-------
+
+idea alternativa/test: fare un gioco dove controlli solo questo come meccanica core, tipo roguelike dove c'è il villaggio, le persone e tu le manipoli dall'ombra!
+
+
+
+
+
+	e se fosse da far partire il giocatore con un solo png corrotto e pronto a fare quello che vuole => ed il potere è bloccato finché è in vita o lo libera?
+
+	fare dei tag unici per ogni partita che prende un solo png, con bassa probabilità
+	il destino o "path" è il modo col quale i png affontano i problemi: chi sempre con la forza, chi con l'intelligenza, nonostante la classe, la follia li fa andare fuori dal loro percorso
+	orrori che sono sbloccabili da parte del giocatore se fa fare certe quest ai png, orrori poi che operano nei poi: e vengono attaccati in automatico se lanciati all'assalto!
+	se un png è pazzo abbastanza crea un culto che cerca di aiutarti.. a modo suo, evocando mostri e creando caos!
+		
+	That said, it feels very random at the moment, you either manage to be lucky enough to subvert a location with the needed clues or the nations fall in civil war and you cannot search for clues in them, so the game turns unwinnable. Still, for a 0.0.6 it has more functionality than TWS ever had, player-wise.
+	
+	- se un attore si impossessa di un district che è dominato da un altro che è puppet del giocatore ed è in calling
+		allora il calling si blocca => evento per il giocatore
+	- portraits and NPC are now synced, no more male portrait for females!
+
+
+	- aggiungere poi e distretti nascosti ?
+	
+
+	- new districts and quests:
+		- library
+		- prison
+		- observatory
+		- graveyard
+		- monastery
+		- slums - bassifondi
+		- noble quarter
+		- arena (combattimenti)
+		- miniera
+
+
+domande alle qual irispondere:
+
+- What’s the first thing someone sees when they start your game?
+- What does the first interaction with the controls feel like?
+- How does the scope of the game open up within the first hour — how does it demonstrate its depth to the player?
+- When does the game start to get boring — why would I keep playing once I’ve learned the basics?
+- Can I imagine someone playing my game for fifty hours? What would it take to help them get there — what is the value going to be for them?
+
+
+Per il marketing, vedi https://www.pcgamesinsider.biz/interviews-and-opinion/67383/insight-how-to-brand-your-game-through-words/ subito da controllare:
+
+Title: Self-explanatory, but make sure your title Googles well
+Tagline: A snippet of flavour text that can expand upon your title
+Genre/keywords: Any applicable categories so people know what to expect
+Short description/elevator pitch: How to get your game idea cross in one sentence
+Long description: A fleshed out version of your short description that can include setting and backstory (if applicable)
+List of USPs/game features: Mechanics and other parts of your game that are unique
+
+	
+BACKLOG:
+	- ci sono casualmente dei landmark (creati da un pool iniziale, tipo carte), o poi che compaiono quando succedono certe condizioni o eventi e ci sono delle quest alle quali puoi mandare gli npc che hai corrotto abbastanza tramite il calling
+		poi si vede il movimento delle unità
+			e da li sblocchi dei potenziamenti per la tua religione, che danno bonus o tag ai tuoi seguaci abbastanza corrotti o folli
+	- VALutare https://www.stomt.com/
+	- le nazioni avanzano verso la civilizzazione e tu le combatti per riportarle verso le barbarie, l'ignoranza e la superstizione, così il tuo potere è maggiore
+	- e le azioni che il giocatore fa fare ai png.. finiscono nelle quest fatte => e bloccano la simulazione sotto, di fatto il png è occupato a fare altro..
+	- question mark ? left icons with different colors for different type of events: quests, triggered, characters, positive and negative for player
+	- preview screen for every action on actors => modifiers from events, districts, world, actors, random etc.. tags for handling that ?
+
+	- le crisi non sono generate a caso (es. ribellioni, poco cibo, piaghe), ma da scelte dei png e del pg attraverso i png
+	- capire cosa succede dopo che ribelli/loyalisti si scontrano: effetti su rapporti tra città, gilde, personaggi, cosa fanno i personaggi e se li rende più manipolabili
+	- connect districts and clues: a character in power of a district where clues is get a bonus ? need to think about this!
+	- aggiungere una descrizione che cambia della città in base al suo stato ? => si può ottenere anche con un'icona, riportandola dalla mappa principale anche nel dettaglio della città
+	
+	- BUG: double calling on focused hero.. with one power!
+	
+	- manipulation outcome: I want to add more information about possible manipulation outcome. Do to it my idea is to add a panel when user decide to start a manipulation on a character against another character and using madness stat, preview to player the possible outcome (with a percentage, because player does not have total control)
+	- complicate victory: follow ideas before, add a chance (10% for first power to obtain, more for the following) that an organization or character uncover the secret and alter the equilibrium in the world (factions, relations), so player must find a way to "manipulate" this target in the right way
+	- events and consequences: I want to find a way for an event to "tag" (and display on ui) a poi with a permanent modifier, so player can see how certain events impact on a poi. An example is +2 rebellion, famine, etc..
+			
+
+	issue testo tagliato: per riprodurlo lancio, clicco sull'icona della città, clicco sul PG, clicco su focus. ecco la screen
+
+	Quello che faticavo a capire nella meccanica era il meccanismo per cui dovevo usare una skill e poi fare avanti di turno. In giochi a turno ho visto fare cose del tipo uso i miei punti...quando non posso fare altro l'icona del potere è grigia (non posso più usarlo) e posso soltanto fare fine turno (magari segnalandolo).			
+			
+
+
+Ideas:
+	- avere un'opzione in avvio che permetta di far partire col mondo già avanti in simulazione? Bobby2Hand diceva che nel suo gioco, faceva andare 100 turni prima di far andare il gioco
+	- calendario, stagioni, eventi eccezionali come terremoti, maremoti ecc.. 
+	- colored console hightlight cities, characters, districts and quests
+	- different event icons for events
+	- skill / missions to guide players => use focus 10 time => unlock puppet action ?
+	- guild alignment with government vs not so aligned => rebellion wins ? kill character in loyalist forces
+	- focus/time mechanics for government: every X turns advance on a subject (law/war/peace), different government, different subjects possible, more complex government => more time required
+	- character mood (depression/euphoria) => if player force on character to do something that character hates => less mood, something love => more mood. Hate/likes => based on traits. Mood is a bonus/malus on certain actions
+	- willpower? first forced actions are easy => then character will become a puppet on your hand
+	- non-human characters ? for example extraplanar entities ?  older races like mi-go ?

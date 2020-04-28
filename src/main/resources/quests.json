@@ -1,0 +1,210 @@
+[
+	{
+		"name": "Trouble at the docks",
+		"cost": 2,
+		"followerCost": 0,
+		"influenceGain": 2,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "SOCIAL"
+	}, {
+		"name": "Infested dungeon",
+		"cost": 2,
+		"followerCost": 2,
+		"influenceGain": 2,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "PHYSICAL"
+	}, {
+		"name": "Outlaw group",
+		"cost": 3,
+		"followerCost": 0,
+		"influenceGain": 2,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "PHYSICAL",
+		"rewardTag" : "renowned"
+	}, {
+		"name": "Historical monument",
+		"cost": 8,
+		"followerCost": 0,
+		"influenceGain": 2,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "MENTAL"
+	}, {
+		"name": "External fortifications",
+		"cost": 0,
+		"followerCost": 4,
+		"influenceGain": 4,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "PHYSICAL"
+	}, {
+		"name": "Fire in the city!",
+		"cost": 2,
+		"followerCost": 4,
+		"influenceGain": 3,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "SOCIAL"
+	}, {
+		"name": "The fugitive",
+		"cost": 4,
+		"followerCost": 2,
+		"influenceGain": 3,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "MENTAL"
+	}, {
+		"name": "finding the source of the disease?",
+		"cost": 10,
+		"followerCost": 0,
+		"influenceGain": 5,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "MENTAL"
+	}, {
+		"name": "Goblin invasion",
+		"cost": 2,
+		"followerCost": 8,
+		"influenceGain": 5,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "SOCIAL"
+	}, {
+		"name": "Fight in the arena",
+		"cost": 12,
+		"followerCost": 2,
+		"influenceGain": 6,
+		"place": "",
+		"arcaneGain": 0,
+		"difficulty" : 10,
+		"type" : "PHYSICAL",
+		"loseTag" : "scarred"
+	}, {
+		"name": "Dock's tales",
+		"cost": 10,
+		"followerCost": 10,
+		"influenceGain": 0,
+		"place": "docks",
+		"arcaneGain": 2,
+		"difficulty" : 10,
+		"type" : "SOCIAL"
+	}, {
+		"name": "Caller from the sea",
+		"cost": 20,
+		"followerCost": 0,
+		"influenceGain": 0,
+		"place": "docks",
+		"arcaneGain": 2,
+		"difficulty" : 10,
+		"type" : "MENTAL"
+	}, {
+		"name": "The sarcophagus from distant countries",
+		"cost": 20,
+		"followerCost": 20,
+		"influenceGain": 0,
+		"place": "docks",
+		"arcaneGain": 4,
+		"difficulty" : 10,
+		"type" : "SOCIAL",
+		"rewardTag" : "generous"
+	}, {
+		"name": "Castle's dungeon",
+		"cost": 10,
+		"followerCost": 10,
+		"influenceGain": 0,
+		"place": "castle",
+		"arcaneGain": 1,
+		"difficulty" : 10,
+		"type" : "PHYSICAL",
+		"loseTag" : "scarred"
+	}, {
+		"name": "Ruined tower",
+		"cost": 20,
+		"followerCost": 0,
+		"influenceGain": 0,
+		"place": "castle",
+		"arcaneGain": 2,
+		"difficulty" : 10,
+		"type" : "SOCIAL"
+	}, {
+		"name": "Night observatory",
+		"cost": 40,
+		"followerCost": 40,
+		"influenceGain": 0,
+		"place": "castle",
+		"arcaneGain": 8,
+		"difficulty" : 10,
+		"type" : "MENTAL",
+		"rewardTag": "intelligent"
+	}, {
+		"name": "A pact of thieves",
+		"cost": 10,
+		"followerCost": 10,
+		"influenceGain": 0,
+		"place": "market",
+		"arcaneGain": 2,
+		"difficulty" : 10,
+		"type" : "SOCIAL",
+		"rewardTag": "greedy"
+	}, {
+		"name": "A war between thieves",
+		"cost": 30,
+		"followerCost": 10,
+		"influenceGain": 0,
+		"place": "market",
+		"arcaneGain": 4,
+		"difficulty" : 10,
+		"type" : "PHYSICAL"
+	}, {
+		"name": "Anathema",
+		"cost": 40,
+		"followerCost": 40,
+		"influenceGain": 0,
+		"place": "market",
+		"arcaneGain": 8,
+		"difficulty" : 10,
+		"type" : "SOCIAL",
+		"loseTag" : "anathema"
+	}, {
+		"name": "Cathedral's catacombs",
+		"cost": 20,
+		"followerCost": 20,
+		"influenceGain": 0,
+		"place": "cathedral",
+		"arcaneGain": 4,
+		"difficulty" : 10,
+		"type" : "MENTAL"
+	}, {
+		"name": "Patriarch artifacts",
+		"cost": 40,
+		"followerCost": 40,
+		"influenceGain": 0,
+		"place": "cathedral",
+		"arcaneGain": 8,
+		"difficulty" : 10,
+		"type" : "PHYSICAL",
+		"rewardTag": "strong"		
+	}, {
+		"name": "Await a new messiah",
+		"cost": 50,
+		"followerCost": 10,
+		"influenceGain": 0,
+		"place": "cathedral",
+		"arcaneGain": 6,
+		"difficulty" : 10,
+		"type" : "MENTAL",
+		"loseTag" : "falseGod"
+	}
+]
